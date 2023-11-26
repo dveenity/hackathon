@@ -1,0 +1,813 @@
+@font-face {
+  font-family: "Inter";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  font-display: swap;
+}
+
+header {
+  background: rgba(26, 26, 26, 1);
+  padding: 0px 16px;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  background-color: rgba(241, 241, 241);
+  margin: 0px;
+  padding: 0px 0px 50px 0px;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header-search-div {
+  max-width: 480px;
+  border: 1px solid rgba(97, 97, 97, 1);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px;
+  align-items: center;
+  height: 32px;
+  padding: 0px 8px 0px 8px;
+}
+
+.header-search-div:hover {
+  border: 1px solid rgba(225, 225, 225, 1);
+}
+
+.header-search-div:focus-within {
+  border: 2px solid rgba(225, 225, 225, 1);
+}
+
+.header-search-div input:focus {
+  outline: none;
+}
+
+.header-search-div input {
+  background-color: transparent;
+  border: none;
+  color: rgba(181, 181, 181, 1);
+}
+
+.header-search-div input:focus {
+  outline: none;
+}
+
+.header-notification-button {
+  width: 32px;
+  gap: 8px;
+  border: none;
+  height: 32px;
+}
+
+.header-search-div,
+.header-notification-button,
+.header-merchant-profile-button {
+  border-radius: 8px;
+  background: rgba(48, 48, 48);
+}
+
+.header-notification-button:focus,
+.header-merchant-profile-button:focus {
+  background: rgba(101, 98, 102, 1);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 1);
+}
+
+.header-notification-button {
+  padding: 8px;
+}
+
+.header-merchant-profile-button {
+  width: 142px;
+  padding: 2px 2px 2px 8px;
+  gap: 8px;
+  display: grid;
+  grid-template-columns: auto 28px;
+  align-items: center;
+}
+
+.header-merchant-profile-image-div-button,
+.merchant-dropdown-menu-merchant-profile-image-div {
+  background: rgba(54, 251, 161, 1);
+  width: 28px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  height: 28px;
+}
+
+.header-merchant-profile-image-div-button {
+  padding: 0px;
+}
+
+.header-merchant-profile-image-div-button span {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.header-buttons-grid-div {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.header-buttons-grid-div button {
+  border: none;
+}
+
+.header-merchant-profile-button > span:nth-child(1) {
+  white-space: nowrap;
+  color: rgba(227, 227, 227, 1);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+.body-main-inner-div {
+  margin: 40px auto auto auto;
+}
+
+.setup-guide-each-step-image {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .tab-desktop-header-logo,
+  .header-merchant-profile-button {
+    display: none;
+  }
+  .active-setup-guide-each-step-div .setup-guide-each-step-image {
+    display: none !important;
+  }
+  .active-setup-guide-each-step-div {
+    grid-template-columns: 1fr !important;
+    gap: 0px !important;
+  }
+  .header-notification-button,
+  .header-notification-button:hover,
+  .header-notification-button:active {
+    background: transparent;
+    border: none;
+  }
+  .header-search-div {
+    width: 61.03%;
+  }
+  .select-a-plan-div
+    .select-a-plan-inner-grid-div
+    .select-a-plan-div-dismiss-button {
+    display: none !important;
+  }
+  .select-a-plan-div .mobile-dismiss-plan-button {
+    display: block !important;
+  }
+  .select-a-plan-text-dismiss-button-responsive-grid-div {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-header-logo,
+  .mobile-header-header-merchant-profile-image-div-button {
+    display: none;
+  }
+  .header-search-div {
+    min-width: 278px;
+  }
+  .header-notification-button:hover,
+  .header-merchant-profile-button:hover {
+    background: rgba(97, 97, 97, 1);
+  }
+  .header-notification-button:active,
+  .header-merchant-profile-button:active {
+    background: rgba(101, 98, 102, 1);
+  }
+  .select-a-plan-div {
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .select-a-plan-div
+    .select-a-plan-inner-grid-div
+    .select-a-plan-div-dismiss-button {
+    display: block !important;
+  }
+  .select-a-plan-div .mobile-dismiss-plan-button {
+    display: none !important;
+  }
+}
+
+.select-a-plan-div {
+  background: rgba(26, 26, 26, 1);
+  padding: 12px 8px 12px 16px;
+  align-items: center;
+}
+
+@media (min-width: 541px) {
+  .body-main-inner-div {
+    width: 70%;
+  }
+  .setup-guide-div {
+    border-radius: 18px;
+  }
+  .notification-dropdown-menu {
+    width: 383px;
+    position: fixed;
+    top: 69px;
+    right: 10px;
+  }
+  .select-a-plan-div {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 540px) {
+  .select-a-plan-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .body-main-inner-div {
+    width: 100%;
+  }
+  .notification-dropdown-menu {
+    position: fixed;
+    top: 73px;
+    right: 3%;
+    left: 3%;
+  }
+}
+
+.select-a-plan-inner-grid-div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 99px auto;
+  gap: 8px;
+}
+
+.select-a-plan-link {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -1px 0px 0px rgba(181, 181, 181, 1) inset;
+  background: rgba(255, 255, 255);
+  padding: 6px 12px 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+  color: rgba(50, 50, 50, 1);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.extend-trial-text {
+  color: rgba(227, 227, 227, 1);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.setup-guide-div {
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(219, 219, 219, 1);
+  background: rgba(255, 255, 255);
+  padding: 8px 6px;
+  margin-top: 20px;
+}
+
+.setup-guide-upper-grid-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setup-guide-text {
+  color: rgba(48, 48, 48, 1);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  margin: 5px 0px 0px 0px;
+}
+
+.use-this-guide-text {
+  color: rgba(48, 48, 48, 1);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  margin-top: 0px;
+}
+
+.setup-progress-div {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.setup-progress-bar-outer-div {
+  background: rgba(227, 227, 227, 1);
+  width: 72px;
+  height: 4px;
+  border-radius: 28px;
+}
+
+.setup-progress-bar-inner-div {
+  background: rgba(26, 26, 26, 1);
+  width: 0%;
+  height: 4px;
+  border-radius: 28px;
+}
+
+.setup-progress-div span {
+  white-space: nowrap;
+  color: rgba(48, 48, 48, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+.setup-guide-upper-grid-dropdown-arrow-button {
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  height: 28px;
+  width: 28px;
+  border-radius: 6px;
+  padding: 0px;
+}
+
+.setup-guide-upper-grid-dropdown-arrow-button:hover {
+  background: rgba(241, 241, 241, 1);
+}
+
+.setup-guide-upper-grid-dropdown-arrow-button:active {
+  background: rgba(240, 240, 240, 1);
+}
+
+.setup-guide-steps-body-div {
+  display: none;
+}
+
+.setup-guide-each-step-toggle-button {
+  color: rgba(48, 48, 48, 1);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  border: none;
+  background-color: transparent;
+  padding: 4px;
+  text-align: left;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+
+.setup-guide-each-step-toggle-grid-div {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
+  align-items: center;
+}
+
+.active-setup-guide-each-step-div {
+  background: rgba(243, 243, 243, 1);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.setup-guide-steps-body-div > .setup-guide-each-step-div:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.setup-guide-steps-body-div > .setup-guide-each-step-div:last-child {
+  margin-bottom: 5px;
+}
+
+.setup-guide-each-step-div {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 96px;
+  padding-left: 8px;
+  position: relative;
+}
+
+.setup-guide-upper-grid-div,
+.setup-progress-div {
+  margin-left: 8px;
+}
+
+.setup-guide-each-step-body-div {
+  padding-left: 32px;
+  display: none;
+  margin-bottom: 50px;
+}
+
+.setup-guide-each-step-info-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: rgba(97, 97, 97, 1);
+}
+
+.setup-guide-each-step-learn-more-text {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: rgba(0, 91, 211, 1);
+}
+
+.setup-guide-each-step-body-div > p:nth-child(1) {
+  margin: 5px 0px 0px 0px;
+}
+
+.setup-guide-each-step-body-div > p:nth-child(2) {
+  margin: 0px 0px 0.5rem 0px;
+}
+
+.setup-guide-each-step-action-button {
+  box-shadow: 0px 0px 0px 1.5px rgba(51, 51, 51, 1),
+    0px 1px 0px 1.5px rgba(51, 51, 51, 1), 0px 2px 0px 0px rgba(0, 0, 0, 1);
+  border-width: 1.5px, 1.5px, 0px, 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(246, 243, 246, 1);
+  background-color: rgba(64, 64, 64, 1);
+  padding: 6px 12px;
+  height: 28px;
+  border-radius: 6px;
+}
+
+.import-product-button {
+  color: rgba(50, 50, 50, 1);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0em;
+  width: 112px;
+  height: 28px;
+  border-radius: 6px;
+  border: none;
+  background-color: transparent;
+  left: 153px;
+  white-space: nowrap;
+}
+
+.setup-guide-steps-body-div
+  > .setup-guide-each-step-div:nth-child(3)
+  .setup-guide-each-step-action-button,
+.setup-guide-steps-body-div
+  > .setup-guide-each-step-div:nth-child(4)
+  .setup-guide-each-step-action-button {
+  margin-top: 10px;
+}
+
+.setup-guide-steps-body-div .setup-guide-each-step-action-button,
+.import-product-button {
+  position: absolute;
+  bottom: 10px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .setup-guide-each-step-div {
+    gap: 30px !important;
+  }
+}
+
+.notification-dropdown-menu,
+.merchant-dropdown-menu {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 14px;
+  display: none;
+  background: rgba(255, 255, 255);
+  z-index: 1;
+}
+
+.notification-dropdown-menu {
+  padding: 16px;
+}
+
+.notification-dropdown-menu-upper-grid-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-dropdown-menu-upper-icons-grid-div {
+  display: grid;
+  grid-template-columns: 20px 20px;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-dropdown-menu-upper-icons-grid-div button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  border: none;
+}
+
+.notification-dropdown-menu-upper-grid-div span {
+  color: rgba(48, 48, 48, 1);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.notification-dropdown-menu-alerts-about-div {
+  background: rgba(241, 241, 241, 1);
+  min-height: 50px;
+  max-height: 68px;
+  padding: auto 16px;
+  margin-top: 16px;
+}
+
+.notification-dropdown-menu-alerts-about-text {
+  color: rgba(97, 97, 97, 1);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+}
+
+.select-a-plan-div-dismiss-button {
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-a-plan-div-dismiss-button {
+  width: 20px;
+  border-radius: 6px;
+}
+
+.setup-guide-add-product-action-buttons-grid-div {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.merchant-dropdown-menu {
+  position: fixed;
+  top: 69px;
+  right: 10px;
+  padding: 6px 0px;
+}
+
+.merchant-dropdown-menu-merchant-profile-div {
+  width: 308px;
+  padding: 4px 12px 4px 8px;
+  border-radius: 8px;
+  background: rgba(241, 241, 241, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.merchant-dropdown-menu-merchant-profile-grid-div {
+  display: grid;
+  grid-template-columns: 28px min-content;
+  gap: 8px;
+  align-items: center;
+}
+
+.merchant-dropdown-menu-merchant-profile-grid-div
+  .merchant-dropdown-menu-merchant-name {
+  color: rgba(48, 48, 48, 1);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  white-space: nowrap;
+}
+
+.merchant-dropdown-menu-merchant-profile-image-div span {
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0em;
+}
+
+.merchant-dropdown-menu-all-stores-link {
+  padding: 6px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
+  margin-top: 2px;
+  align-items: center;
+}
+
+.merchant-dropdown-menu-link-text {
+  color: rgba(48, 48, 48, 1);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  white-space: nowrap;
+}
+
+.merchant-dropdown-menu-hr {
+  height: 0.75px;
+  background-color: rgba(225, 225, 225, 1);
+  border: none;
+  margin: 4px 0px;
+}
+
+.merchant-dropdown-menu-inner-padded-div {
+  padding: 0px 6px;
+}
+
+.merchant-dropdown-menu a {
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.merchant-dropdown-menu a:hover {
+  background: rgba(241, 241, 241, 1);
+}
+
+.merchant-dropdown-menu a:active {
+  background: rgba(240, 240, 240, 1);
+}
+
+.merchant-dropdown-menu-plain-link {
+  padding: 0px 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  height: 30px;
+}
+
+.merchant-dropdown-menu-profile-name-email-link {
+  padding: 0px 6px;
+  border-radius: 8px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.merchant-dropdown-menu-profile-name-email-link p {
+  margin: 0px;
+}
+
+.merchant-dropdown-menu-profile-name-email-link > p:nth-child(1) {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  color: rgba(48, 48, 48, 1);
+}
+
+.merchant-dropdown-menu-profile-name-email-link > p:nth-child(2) {
+  color: rgba(97, 97, 97, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+}
+
+.setup-guide-upper-grid-dropdown-arrow-button > svg:nth-child(2) {
+  display: none;
+}
+
+.setup-guide-each-step-action-button:hover {
+  background: rgba(42, 42, 42, 1);
+  border-width: 1.5px, 1.5px, 0px, 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 0px 1.5px rgba(51, 51, 51, 1),
+    0px 1px 0px 1.5px rgba(51, 51, 51, 1), 0px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.setup-guide-each-step-action-button:active {
+  border-width: 1.5px, 1.5px, 0px, 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 0px 1.5px rgba(51, 51, 51, 1),
+    0px 3px 0px 0px rgba(0, 0, 0, 1) inset;
+  background: rgba(43, 43, 43, 1);
+}
+
+.setup-guide-each-step-action-button:focus {
+  border-width: 1.5px, 1.5px, 0px, 1.5px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 0px 5px rgba(0, 91, 211, 1),
+    0px 0px 0px 3px rgba(255, 255, 255, 1),
+    0px 0px 0px 1.5px rgba(51, 51, 51, 1);
+  background: rgba(64, 64, 64, 1);
+}
+
+.import-product-button:hover {
+  background: rgba(231, 231, 231, 1);
+}
+
+.import-product-button:active {
+  background: rgba(224, 224, 224, 1);
+}
+
+.import-product-button:focus,
+.setup-guide-each-step-toggle-button:focus,
+.setup-guide-each-step-toggle-completion-button:focus,
+.header-search-button:focus,
+.select-a-plan-div-dismiss-button:focus,
+.setup-guide-upper-grid-dropdown-arrow-button:focus,
+.header-merchant-profile-image-div-button:focus,
+.header-notification-button:focus,
+.header-merchant-profile-button:focus,
+.select-a-plan-link:focus,
+.setup-guide-each-step-action-button:focus,
+.tab-desktop-header-logo:focus,
+.mobile-header-logo:focus,
+.merchant-dropdown-menu a:focus {
+  outline: 2px solid rgba(0, 91, 211, 1);
+}
+
+.select-a-plan-link:hover {
+  background: rgba(247, 247, 247, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -1px 0px 0px rgba(181, 181, 181, 1) inset;
+}
+
+.select-a-plan-link:active {
+  background: rgba(247, 247, 247, 1);
+  box-shadow: 0px 2px 1.5px 0px rgba(226, 226, 226, 1) inset;
+}
+
+.select-a-plan-link:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1),
+    0px -1px 0px 0px rgba(181, 181, 181, 1) inset;
+}
+
+.header-search-button {
+  border-radius: 6px;
+  border: none;
+  background-color: transparent;
+  padding: 4px;
+}
+
+#customCheck input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.check-label {
+  cursor: pointer;
+}
+
+.completion-check-image {
+  display: none;
+}
+
+.completion-check-image.active {
+  display: block;
+}
+
+#customCheck {
+  width: 24px;
+  height: 24px;
+}
+
+.notification-dropdown-menu-upper-icons-grid-div button {
+  padding: 0px;
+}
+
+.tab-desktop-header-logo:focus,
+.mobile-header-logo:focus {
+  border-radius: 6px;
+}
